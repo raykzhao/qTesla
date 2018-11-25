@@ -33,7 +33,7 @@ ifeq "$(DEBUG)" "TRUE"
     DFLAG=-DDEBUG
 endif
 
-OBJECTS_p_III = objs_p_III/sign.o objs_p_III/pack.o objs_p_III/sample.o objs_p_III/poly.o objs_p_III/consts.o objs/fips202.o objs/random.o
+OBJECTS_p_III = objs_p_III/sign.o objs_p_III/pack.o objs_p_III/sample.o objs_p_III/poly.o objs_p_III/consts.o objs_p_III/fastrandombytes.o objs/fips202.o objs/random.o 
 SOURCE_TEST = tests/cpucycles.c tests/test_qtesla.c
 SOURCE_KATS_GEN  = tests/rng.c tests/PQCgenKAT_sign.c
 SOURCE_KATS_TEST = tests/rng.c tests/PQCtestKAT_sign.c
