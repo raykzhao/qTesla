@@ -62,7 +62,7 @@ void fastrandombytes_setseed(const unsigned char *randomness, int nonce)
 	temp1 = AES_128_ASSIST(temp1, temp2);
 	round_key[10] = temp1;
 
-	iv = _mm_set_epi64x(0, nonce);
+	iv = _mm_set_epi64x(nonce, 0);
 }
 
 static inline void AES_ctr_round(unsigned char *out)
